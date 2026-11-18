@@ -22,8 +22,8 @@
     { "yellow",      4 },              \
     { "blue",        5 },              \
     { "orange",      6 },              \
-    { "strum_up",    7 },              \
-    { "strum_down",  8 },              \
+    { "strum_up",   16 },              \
+    { "strum_down", 17 },              \
     { "start",       9 },              \
     { "select",     10 },  /* a.k.a. Star Power / Back */ \
     { "tilt",       11 },

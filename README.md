@@ -37,7 +37,16 @@ interface so VS Code can reflash the board without you pressing BOOTSEL.
 
 ## Wiring (defaults)
 
+![Wiring diagram for the default pins](docs/wiring-default.png)
+
 Every switch goes between its GPIO and **GND**. No resistors needed because the internal pull-ups are used.
+
+This picture shows the **default** pins. If you change pins in `src/config.h`, draw an
+up-to-date version with the command below and open `docs/wiring.svg`:
+
+```
+python3 tools/wiring_diagram.py
+```
 
 | Control | GPIO |
 |---|---|
@@ -46,8 +55,8 @@ Every switch goes between its GPIO and **GND**. No resistors needed because the 
 | Yellow | GP4 |
 | Blue | GP5 |
 | Orange | GP6 |
-| Strum up | GP7 |
-| Strum down | GP8 |
+| Strum up | GP16 |
+| Strum down | GP17 |
 | Start | GP9 |
 | Select / Star Power | GP10 |
 | Tilt switch | GP11 |
@@ -95,6 +104,9 @@ If you're not using a plain Pico, change `PICO_BOARD` in `CMakeLists.txt`.
 | `src/inputs.c` | Switch reading with debouncing, analog reading with smoothing |
 | `src/usb_descriptors.c` | How the board describes itself over USB, including the report layout |
 | `src/tusb_config.h` | TinyUSB (USB library) settings |
+| `tools/wiring_diagram.py` | Draws `docs/wiring.svg` from `config.h` on top of `pico-pinout.svg` |
+
+The Pico pinout artwork (`pico-pinout.svg`) is by Raspberry Pi Ltd.
 
 ## Ideas for later
 
