@@ -37,7 +37,7 @@ interface so VS Code can reflash the board without you pressing BOOTSEL.
 
 ## Wiring (defaults)
 
-![Wiring diagram for the default pins](docs/wiring-default.png)
+![Wiring diagram for the default pins](docs/wiring.svg)
 
 Every switch goes between its GPIO and **GND**. No resistors needed because the internal pull-ups are used.
 
